@@ -1,24 +1,27 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { ScrollView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
 export default function FlatCards() {
     return (
         <View>
             <Text style={styles.headingText}>FlatCards</Text>
-            <View style={styles.container}>
-                <View style={[styles.card, styles.card1]}>
-                    <Text style={styles.cardText}> Red</Text>
+            <ScrollView horizontal={true} style={styles.container}>
+                <View style={styles.container}>
+                    <View style={[styles.card, styles.card1]}>
+                        <Text style={styles.cardText}> Red</Text>
+                    </View>
+                    <View style={[styles.card, styles.card2]}>
+                        <Text style={styles.cardText}> perpul</Text>
+                    </View>
+                    <View style={[styles.card, styles.card3]}>
+                        <Text style={styles.cardText}> green</Text>
+                    </View>
+                    <View style={[styles.card, styles.card4]}>
+                        <Text style={styles.cardText}> blue</Text>
+                    </View>
+
                 </View>
-                <View style={[styles.card, styles.card2]}>
-                    <Text style={styles.cardText}> perpul</Text>
-                </View>
-                <View style={[styles.card, styles.card3]}>
-                    <Text style={styles.cardText}> green</Text>
-                </View>
-                <View style={[styles.card, styles.card4]}>
-                    <Text style={styles.cardText}> blue</Text>
-                </View>
-            </View>
+            </ScrollView>
         </View>
     )
 }
@@ -28,7 +31,8 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: 'bold',
         color: '#000',
-        marginTop:5
+        marginTop: 5,
+        marginLeft: 2,
 
     },
     container: {
@@ -39,9 +43,9 @@ const styles = StyleSheet.create({
         gap: 5,
     },
     card: {
-        width: '20%',
+        width: 100,
         height: 100,
-        borderRadius: 5,
+        borderRadius: 0,
         alignItems: 'center',
         justifyContent: 'center'
     },
