@@ -44,10 +44,11 @@ const styles = StyleSheet.create({
     },
     card: {
         width: 100,
-        height: 100,
-        borderRadius: 0,
+        height: 150,
+        borderRadius: 5,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+    
     },
     card1: {
         backgroundColor: 'red',
